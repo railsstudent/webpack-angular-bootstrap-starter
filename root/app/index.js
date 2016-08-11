@@ -1,10 +1,11 @@
-const angularApp = angular.module('app', [
-  require('angular-route'),require('angular-messages')])
-      .config(function($routeProvider) {
-          $routeProvider.otherwise('/');
-      });
+import { default as layoutModule } from './core/layout';
 
-module.exports = angularApp;
+module.exports = angular.module('app', [
+      /* 3rd party */
+      'lumx',
+      /* JS */
+      layoutModule
+]);
 
 // default params
 function printMessage (status = 'working') {

@@ -36,6 +36,9 @@ module.exports = {
         {
           test: /\.(woff|woff2|ttf|eot|svg)(\?]?.*)?$/,
           loader : 'file-loader?name=res/[name].[ext]?[hash]'
+        },
+        { test: /\.html$/,
+          loader: 'html'
         }
       ]
     }
