@@ -23,10 +23,23 @@ module.exports = {
         {
             test: /\.scss$/,
             loaders: ['style', 'css', 'sass']    // sass loader => css loader => style loader
+        },
+        {
+            test: /\.js$/,
+            loader: 'ng-annotate!babel?presets[]=es2015!jshint',    // jshint loader => babel loader => ng-annotate loader
+            exclude: /node_modules|bower_components/
+        },
+        {
+          test: /\.css$/,
+          loaders: ['style', 'css']    // css loader => style loader
+        },
+        {
+          test: /\.(woff|woff2|ttf|eot|svg)(\?]?.*)?$/,
+          loader : 'file-loader?name=res/[name].[ext]?[hash]'
         }
       ]
     }
-};
+}
 
 // hot-reload plugin
 // test in browser: http://localhost:8080/webpack-dev-server/bundle
