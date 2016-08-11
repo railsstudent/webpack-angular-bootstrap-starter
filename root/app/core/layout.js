@@ -1,6 +1,6 @@
 var moduleName = 'app.layout';
 
-import { default as navDirective } from './nav/navDirective';
+import navDirective  from './nav/navDirective';
 
 angular.module(moduleName, [])
   .directive('lumxNavbar', navDirective);
