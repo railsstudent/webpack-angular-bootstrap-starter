@@ -17,11 +17,4 @@ class NavCtrl {
   }
 }
 
-/*export default () => {
-  require('./nav.scss');  // load styles for the component
-  return {
-    controller: NavCtrl,
-    controllerAs: 'nav',
-    templateUrl: './core/nav/nav.html'
-  };
-};*/
+export default NavCtrl;

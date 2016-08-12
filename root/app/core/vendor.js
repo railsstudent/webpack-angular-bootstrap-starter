@@ -7,8 +7,8 @@ module.exports = function() {
   /* attach to global context. $ for Lumx, jQuery for velocity */
   global.$ = global.jQuery = require('jquery');
   require('velocity-animate');
-  require('angular');
   /* LumX uses a global moment */
   global.moment = require('moment');
+  const angular = require('angular');
   require('node-lumx');
 };

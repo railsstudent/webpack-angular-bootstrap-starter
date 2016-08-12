@@ -1,8 +1,8 @@
 var moduleName = 'app.layout';
 
-import navDirective  from './nav/navDirective';
+import NavDirective  from './nav/navDirective';
 
 angular.module(moduleName, [])
-  .directive('lumxNavbar', navDirective);
+  .directive('lumxNavbar', () => new NavDirective);
 
 export default moduleName;

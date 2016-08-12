@@ -1,30 +1,17 @@
-let NavCtrl = function _NavCtrl() {
-    this.app = {
-      title: 'Module Loaders',
-      version: '0.3.0',
-      links: [{
-        text: 'Webpack',
-        link: 'http://webpack.github.io'
-      }, {
-        text: 'Require.js',
-        link: 'http://requirejs.org/'
-      }, {
-        text: 'Jspm',
-        link: 'http://jspm.io/'
-      }, {
-        text: 'Grunt',
-        link: 'http://gruntjs.com/'
-      }]
-    };
-};
+// https://medium.com/@daviddentoom/switching-to-es6-with-angular-1-x-is-easy-a08c40c2fc72#.q6tolam27
+import NavCtrl from './nav';
+require('./nav.scss');  // load styles for the component
+class NavDirective {
 
-function navDirective() {
-  require('./nav.scss');  // load styles for the component
-  return {
-    controller: NavCtrl,
-    controllerAs: 'nav',
-    template : require('./nav.html')
-  };
+  constructor() {
+    this.controller = NavCtrl;
+    this.controllerAs = 'nav';
+    this.template = require('./nav.html');
+  }
+
+  compile() {}
+
+  link() {}
 }
 
-export default navDirective;
+export default NavDirective;
