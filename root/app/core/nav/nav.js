@@ -12,6 +12,12 @@ class NavCtrl {
       }, {
         text: 'Jspm',
         link: 'http://jspm.io/'
+      }, {
+        text: 'GruntJs',
+        link: 'http://gruntjs.com/'
+      }, {
+        text: 'GulpJs',
+        link: 'http://gulpjs.com/'
       }]
     };
   }
