@@ -1,10 +1,8 @@
 module.exports = function() {
   /* Styles */
-  /* bootstrap 3 style */
-  require('../../node_modules/bootstrap/dist/css/bootstrap.min.css');
-  /* font awesome icon css */
-  require('../../node_modules/font-awesome/css/font-awesome.min.css');
   require('../index.scss');
+  /* Fontawesome */
+  require('../../node_modules/font-awesome/css/font-awesome.min.css');
 
   /* JS */
   /* attach to global context. $ and jQuery for bootstrap */

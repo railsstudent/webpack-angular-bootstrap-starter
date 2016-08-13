@@ -50,7 +50,10 @@ module.exports = {
           loader: 'json'
         }
       ]
-    }
+    },
+    devServer: {
+     historyApiFallback: true
+   }
 }
 
 // hot-reload plugin

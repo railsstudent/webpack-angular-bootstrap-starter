@@ -1,3 +1,4 @@
+'use strict';
 
 class AboutController {
   constructor() {
@@ -5,6 +6,7 @@ class AboutController {
     this.gender = 'Female';
     this.visible = true;
     this.buttonText = 'Hide Me!!!!';
+    this.repo = 'https://github.com/railsstudent/webpack-angular-bootstrap-starter';
   }
 
   toggleVisible() {
