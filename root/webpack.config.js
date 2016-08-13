@@ -3,7 +3,7 @@
 var webpack = require('webpack'),
   path = require('path');
 
-var APP = __dirname + '/app';
+var APP = path.resolve(__dirname , 'app');
 module.exports = {
     // config goes here
     context: APP,
@@ -13,7 +13,12 @@ module.exports = {
                 , './core/bootstrap.js'
               ]
     },
-    plugins: [ new webpack.HotModuleReplacementPlugin() ],
+    plugins: [ new webpack.HotModuleReplacementPlugin(),
+               new webpack.DefinePlugin({
+                    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+                },
+              new webpack.optimize.UglifyJsPlugin())
+     ],
     output: {
         path: APP,
         filename: './bundle.js'
@@ -39,10 +44,14 @@ module.exports = {
         },
         { test: /\.html$/,
           loader: 'html'
+        },
+        {
+          test: /\.json$/,
+          loader: 'json'
         }
       ]
     }
 }
 
 // hot-reload plugin
-// test in browser: http://localhost:8080/webpack-dev-server/bundle
+// test in browser: http://localhost:8080/webpack-dev-server

@@ -6,3 +6,5 @@ module.exports = angular.module('app', [
       /* JS */
       layoutModule
 ]);
+
+console.log('environment: ' + process.env.NODE_ENV);
