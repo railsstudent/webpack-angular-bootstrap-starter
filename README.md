@@ -1,4 +1,4 @@
-# webpack-angular-starter
+# webpack-angular-bootstrap-starter
 Angular 1.5.x starter project built with webpack, bootstrap and fontawesome
 
 
