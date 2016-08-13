@@ -1,5 +1,5 @@
 // https://medium.com/@daviddentoom/switching-to-es6-with-angular-1-x-is-easy-a08c40c2fc72#.q6tolam27
-import NavCtrl from './nav';
+/*import NavCtrl from './nav';
 require('./nav.scss');  // load styles for the component
 class NavDirective {
 
@@ -15,3 +15,4 @@ class NavDirective {
 }
 
 export default NavDirective;
+*/

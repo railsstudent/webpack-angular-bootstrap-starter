@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --content-base app --hot",
-    "prod" : "NODE_ENV=production webpack-dev-server --config=webpack.config.js --content-base app"
+    "prod": "NODE_ENV=production webpack-dev-server --config=webpack.config.js --content-base app"
   },
   "author": "Connie Leung",
   "license": "ISC",
@@ -30,11 +30,9 @@
   },
   "dependencies": {
     "angular": "~1.5.8",
-    "bourbon": "~4.2.7",
-    "jquery": "~3.1.0",
-    "mdi": "~1.6.50",
-    "moment": "~2.14.1",
-    "node-lumx": "~1.0.0",
-    "velocity-animate": "~1.2.3"
+    "angular-route": "~1.5.8",
+    "bootstrap": "~3.3.7",
+    "font-awesome": "~4.6.3",
+    "jquery": "~3.1.0"
   }
 }

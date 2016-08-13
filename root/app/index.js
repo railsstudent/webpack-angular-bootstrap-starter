@@ -1,10 +1,13 @@
-import { default as layoutModule } from './core/layout';
+'use strict';
 
-module.exports = angular.module('app', [
-      /* 3rd party */
-      'lumx',
+//import { default as layoutModule } from './core/layout';
+
+/*module.exports = angular.module('app', [
+*/      /* 3rd party */
+//      'lumx',
       /* JS */
-      layoutModule
-]);
+//      layoutModule
+//]);
 
+module.exports = angular.module('app', []);
 console.log('environment: ' + process.env.NODE_ENV);
