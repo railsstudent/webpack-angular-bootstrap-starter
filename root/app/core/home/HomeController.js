@@ -9,6 +9,7 @@ class HomeController {
   constructor(HomeService) {
     SERVICE.set(this, HomeService);
     this.technologies = SERVICE.get(this).getTechnologies();
+    this.loaders = SERVICE.get(this).getLoaders();
   }
 }
 

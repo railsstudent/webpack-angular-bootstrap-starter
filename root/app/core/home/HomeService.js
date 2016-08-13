@@ -24,10 +24,30 @@ class HomeService {
         'link' : 'http://fontawesome.io/'
       }
     ];
+
+    this.loaders = [
+      {
+        'name' : 'babel-loader',
+      },{
+        'name' : 'css-loader',
+      }, {
+        'name' : 'json-loader',
+      }, {
+        'name' : 'html-loader',
+      }, {
+        'name' : 'file-loader',
+      }, {
+        'name' : 'raw-loader',
+      }
+    ];
   }
 
   getTechnologies() {
     return this.technologies;
+  }
+
+  getLoaders() {
+    return this.loaders;
   }
 
   static homeFactory(){

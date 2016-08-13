@@ -9,7 +9,8 @@ module.exports = {
     context: APP,
     entry: {
         app: [
-                'webpack/hot/dev-server'
+                'babel-polyfill'
+                , 'webpack/hot/dev-server'
                 , './core/bootstrap.js'
               ]
     },
