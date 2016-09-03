@@ -22,6 +22,10 @@ class HomeService {
       {
         'name' : 'Fontawesome',
         'link' : 'http://fontawesome.io/'
+      },
+      {
+        'name' : 'Webpack Dashboard',
+        'link' : 'https://github.com/FormidableLabs/webpack-dashboard'
       }
     ];
 

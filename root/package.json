@@ -1,12 +1,12 @@
 {
-  "name": "webpack-angular-starter",
+  "name": "webpack-angular-bootstrap-starter",
   "version": "0.0.1",
-  "description": "",
+  "description": "Starter project bootstrap with webpack, angular 1.5, boostrap framework and fontawesome",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --content-base app --hot",
-    "prod": "NODE_ENV=production webpack-dev-server --config=webpack.config.js --content-base app"
+    "start": "webpack-dashboard -- webpack-dev-server --content-base app --hot",
+    "prod": "NODE_ENV=production webpack-dashboard -- webpack-dev-server --config=webpack.config.js --content-base app"
   },
   "author": "Connie Leung",
   "license": "ISC",
@@ -27,6 +27,7 @@
     "sass-loader": "~4.0.0",
     "style-loader": "~0.13.1",
     "webpack": "~1.13.1",
+    "webpack-dashboard": "~0.1.8",
     "webpack-dev-server": "~1.14.1"
   },
   "dependencies": {

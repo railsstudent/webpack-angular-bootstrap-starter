@@ -1,7 +1,8 @@
 'use strict';
 
 var webpack = require('webpack'),
-  path = require('path');
+  path = require('path'),
+  DashboardPlugin = require('webpack-dashboard/plugin');
 
 var APP = path.resolve(__dirname , 'app');
 module.exports = {
@@ -18,7 +19,8 @@ module.exports = {
                new webpack.DefinePlugin({
                     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
                 },
-              new webpack.optimize.UglifyJsPlugin())
+              new webpack.optimize.UglifyJsPlugin()),
+              new DashboardPlugin()
      ],
     output: {
         path: APP,
