@@ -47,11 +47,20 @@ class HomeService {
   }
 
   getTechnologies() {
-    return this.technologies;
+    // use ES6 promise to return technologies
+    let p = new Promise(
+      (resolve, reject) => {
+         resolve(this.technologies);
+      });
+    return p;
   }
 
   getLoaders() {
-    return this.loaders;
+    let p = new Promise(
+      (resolve, reject) => {
+          resolve(this.loaders)
+      });
+    return p;
   }
 
   static homeFactory(){

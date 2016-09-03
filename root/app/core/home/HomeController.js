@@ -1,15 +1,19 @@
 'use strict';
 
-//import HomeService from './HomeService';
-
 const SERVICE = new WeakMap();
 
 class HomeController {
 
   constructor(HomeService) {
     SERVICE.set(this, HomeService);
-    this.technologies = SERVICE.get(this).getTechnologies();
-    this.loaders = SERVICE.get(this).getLoaders();
+    let ref = this;
+    SERVICE.get(this).getTechnologies().then(
+         technologies => { ref.technologies = technologies; })
+         .catch(error => { console.log(error); });
+
+    SERVICE.get(this).getLoaders().then(
+       loaders => { ref.loaders = loaders; })
+       .catch(error => { console.log(error); });
   }
 }
 
