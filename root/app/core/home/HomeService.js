@@ -1,4 +1,5 @@
 'use strict';
+import _ from 'lodash';
 
 class HomeService {
   constructor() {
@@ -29,21 +30,12 @@ class HomeService {
       }
     ];
 
-    this.loaders = [
-      {
-        'name' : 'babel-loader',
-      },{
-        'name' : 'css-loader',
-      }, {
-        'name' : 'json-loader',
-      }, {
-        'name' : 'html-loader',
-      }, {
-        'name' : 'file-loader',
-      }, {
-        'name' : 'raw-loader',
-      }
-    ];
+    this.loaders = _.sortBy(
+                        _.map(['babel', 'css', 'scss', 'json', 'html', 'file', 'raw'],
+                          e => ({ 'name' : e + '-loader' })),
+                         e => e.name
+                      );
+    console.log(this.loaders);
   }
 
   getTechnologies() {
