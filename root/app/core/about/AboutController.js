@@ -20,4 +20,4 @@ class AboutController {
   }
 }
 
-export default AboutController;
+export { AboutController };

@@ -48,19 +48,11 @@ class HomeService {
 
   getTechnologies() {
     // use ES6 promise to return technologies
-    let p = new Promise(
-      (resolve, reject) => {
-         resolve(this.technologies);
-      });
-    return p;
+    return new Promise(resolve => resolve(this.technologies));
   }
 
   getLoaders() {
-    let p = new Promise(
-      (resolve, reject) => {
-          resolve(this.loaders)
-      });
-    return p;
+    return new Promise(resolve => resolve(this.loaders));
   }
 
   static homeFactory(){
@@ -68,4 +60,4 @@ class HomeService {
   }
 }
 
-export default HomeService;
+export { HomeService };

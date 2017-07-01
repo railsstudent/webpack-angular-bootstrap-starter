@@ -1,7 +1,4 @@
-import HomeService from './home/HomeService';
+import { HomeService } from './home/HomeService';
 
-const moduleName = 'starter.services';
-angular.module(moduleName, [])
+export const services = angular.module('services', [])
   .factory('HomeService', HomeService.homeFactory);
-
-export default moduleName;

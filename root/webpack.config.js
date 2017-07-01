@@ -8,6 +8,8 @@ var APP = path.resolve(__dirname , 'app');
 module.exports = {
     // config goes here
     context: APP,
+    debug: true,
+    devtool: 'source-map',
     entry: {
         app: [
                 'babel-polyfill'
@@ -15,7 +17,7 @@ module.exports = {
                 , './core/bootstrap.js'
               ]
     },
-    plugins: [ new webpack.HotModuleReplacementPlugin(),
+    plugins: [
                new webpack.DefinePlugin({
                     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
                 },

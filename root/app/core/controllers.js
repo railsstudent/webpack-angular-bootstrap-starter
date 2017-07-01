@@ -1,9 +1,6 @@
-import AboutController from './about/AboutController';
-import HomeController from './home/HomeController';
+import { AboutController } from './about/AboutController';
+import { HomeController } from './home/HomeController';
 
-const moduleName = 'starter.controllers';
-angular.module(moduleName, [])
+export const controllers = angular.module('controllers', [])
   .controller('aboutController', AboutController)
   .controller('homeController', HomeController);
-
-export default moduleName;

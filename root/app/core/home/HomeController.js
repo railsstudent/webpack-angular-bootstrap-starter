@@ -1,20 +1,32 @@
 'use strict';
 
-const SERVICE = new WeakMap();
-
+let HomeService, $timeout;
 class HomeController {
 
-  constructor(HomeService) {
-    SERVICE.set(this, HomeService);
-    let ref = this;
-    SERVICE.get(this).getTechnologies().then(
-         technologies => { ref.technologies = technologies; })
-         .catch(error => { console.log(error); });
+  constructor(_HomeService, _$timeout) {
+    HomeService = _HomeService;
+    $timeout = _$timeout;
 
-    SERVICE.get(this).getLoaders().then(
-       loaders => { ref.loaders = loaders; })
-       .catch(error => { console.log(error); });
+    this.init();
+    this.loadData();
+  }
+
+  init() {
+    this.technologies = [];
+    this.loaders = [];
+  }
+
+  loadData() {
+    return Promise.all([ HomeService.getTechnologies(), HomeService.getLoaders() ])
+            .then(vals =>
+              $timeout(() => {
+                this.technologies = vals[0];
+                this.loaders = vals[1];
+              })
+            )
+            .catch(ex => console.error(ex));
   }
 }
+HomeController.$inject = [ 'HomeService', '$timeout'];
 
-export default HomeController;
+export { HomeController };

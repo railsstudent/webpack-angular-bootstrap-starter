@@ -1,17 +1,18 @@
+import homeTemplate from './home/home.html';
+import aboutTemplate from './about/about.html';
+
+const homeRoute = {
+    template : homeTemplate,
+    controller : 'homeController',
+    controllerAs : 'hc'
+};
+
 export default function($routeProvider, $locationProvider) {
      $routeProvider
-       .when('/', {
-           template : require('./home/home.html'),
-           controller : 'homeController',
-           controllerAs : 'hc'
-       })
-       .when('/home', {
-         template : require('./home/home.html'),
-         controller : 'homeController',
-         controllerAs : 'hc'
-       })
+       .when('/', homeRoute)
+       .when('/home', homeRoute)
        .when('/about', {
-         template : require('./about/about.html'),
+         template : aboutTemplate,
          controller : 'aboutController',
          controllerAs : 'ac'
        })
